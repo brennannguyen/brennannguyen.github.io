@@ -1,22 +1,48 @@
 ﻿nav {
     float: left;
-    height: 100vh;
-    padding: 15px;
+    height:100vh;
+    padding:15px;
     background-color: darkslategray;
+}
+
+h1 {
+    font-size: 250%;
+    margin-left: 170px;
+    color: white;
+}
+
+body {
+    background-color: darkslategray;
+    font-family: Calibri;
 }
 
 ul {
     list-style-type: none;
-    padding: 0;
+    padding:0;
 }
 
 li a {
     background-color: snow;
     color: darkslategray;
     padding: 1em 1.5em;
-    margin: 5px;
+    margin: 2px;
     text-decoration: none;
     display: block;
     border-radius: 15px;
     text-transform: uppercase;
+}
+
+.main {
+    float:left;
+    margin-left:10px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    display: inline-block;
+    max-width: 800px;
+    padding: 4px 4px;
+    margin: 10px;
+    background-color: white;
 }
