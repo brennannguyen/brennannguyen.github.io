@@ -31,7 +31,6 @@
 
 	ol, ul {
 		list-style: none;
-		margin-left: -1em;
 	}
 
 	li{
@@ -70,7 +69,7 @@
 		}
 
 	p {
-		margin: 0 40em 2em 0;
+		margin: 0 40em 1.5em 0;
 		font-weight: 400;
 		font-size: 16px;
 		line-height: 1.5;
@@ -95,7 +94,7 @@
 		font-weight: 400;
 		font-size: 1.2em;
 		line-height: 1.5;
-		margin: 0 30em 2em 0;
+		margin: 0 30em 1.5em 0;
 	}
 
 
@@ -207,12 +206,12 @@
 			color: #2E2F31 !important;
 			cursor: pointer;
 			display: inline-block;
-			font-size: 0.8em;
-			font-weight: 900;
-			height: 3.5em;
-			line-height: 3.45em;
+			font-size: 14px;
+			font-weight: 500;
+			height: 3em;
+			line-height: 2.95em;
 			overflow: hidden;
-			padding: 0 1.25em 0 1.5em;
+			padding: 0 1em 0 1em;
 			text-align: center;
 			text-decoration: none;
 			text-overflow: ellipsis;
@@ -234,8 +233,9 @@
 	display: block;
 	width: 50%;
 	text-align: left;
-	font-size: 23px;
+	font-size: 22px;
 	font-weight: 500;
+	padding: .5em 0 .5em 0;
 	transition: 0.4s;
   }
 
@@ -243,7 +243,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	margin-top: -10em;
+	margin-top: -15em;
 }
 
 
@@ -336,7 +336,7 @@
 					cursor: default;
 					list-style: none;
 					padding-left: 0;
-					margin: -1em 0 2em -1em;
+					margin: -2em 0 2em -1em;
 				}
 			
 					ul.icons li {
@@ -358,7 +358,7 @@
 
 	.image.right {
 		float: right;
-		margin-right: 60px; /* Add space between the text and the image */
+		margin-right: 30px; /* Add space between the text and the image */
 		margin-bottom: 100px; /* Add space below the image */
 	}
 
