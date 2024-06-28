@@ -9,6 +9,18 @@
 		background: #E7EFF6;
 	}
 
+	@-ms-viewport {
+		width: device-width;
+	}
+
+	@media screen and (max-width: 480px) {
+
+		html, body {
+			min-width: 320px;
+		}
+
+	}
+
 	body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 		-moz-animation: none !important;
 		-webkit-animation: none !important;
@@ -95,6 +107,22 @@
 		font-size: 1.2em;
 		line-height: 1.5;
 		margin: 0 30em 1.5em 0;
+	}
+
+	@media screen and (max-width: 1680px) {
+
+		body, input, select, textarea {
+			font-size: 14pt;
+		}
+
+	}
+
+	@media screen and (max-width: 1280px) {
+
+		body, input, select, textarea {
+			font-size: 12pt;
+		}
+
 	}
 
 
