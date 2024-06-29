@@ -467,7 +467,7 @@
 	background-color: #E7EFF6;
   	}
 
-	  @media screen and (max-width: 480px) {
+	  @media screen and (max-width: 720px) {
 		.accordion-container {
 			padding-top: 20em;
 			width: 100%;
