@@ -2,19 +2,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&subset=latin,cyrillic");
 
 /* Basic */
-
 	body {
 		line-height: 1;
 		-ms-overflow-style: scrollbar;
 		background: #E7EFF6;
 	}
+	
+    html {
+        box-sizing: border-box;
+    }
 
 	@-ms-viewport {
 		width: device-width;
 	}
 
 	@media screen and (max-width: 480px) {
-
 		html, body {
 			min-width: 320px;
 		}
@@ -48,10 +50,6 @@
 	li{
 		font-weight: 400;
 	}
-
-    html {
-        box-sizing: border-box;
-    }
 
 /* Type */
     body, input, select, textarea {
@@ -94,6 +92,31 @@
         margin: 0 6em 1em 0; 
         letter-spacing: -0.035em;
     }
+	
+	@media screen and (max-width: 736px) {
+
+		h1 {
+			font-size: 2em;
+			margin: 0 0 1em 0;
+		}
+
+	}
+
+	@media screen and (max-width: 360px) {
+
+		h1 {
+			font-size: 1.75em;
+		}
+
+	}
+
+	@media screen and (max-width: 980px) {
+
+		h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
+			display: none;
+		}
+
+	}
 
 	h2 {
 		font-weight: 400;
@@ -107,6 +130,25 @@
 		font-size: 1.2em;
 		line-height: 1.5;
 		margin: 0 30em 1.5em 0;
+	}
+
+	h4 {
+		font-weight: 400;
+		font-size: 1.2em;
+		line-height: 1.5;
+		margin: 0em 0em -.5em 0em;
+	}
+
+	@media screen and (max-width: 736px) {
+
+		h2 {
+			font-size: 1em;
+		}
+
+		h3 {
+			font-size: 0.8em;
+		}
+
 	}
 
 	@media screen and (max-width: 1680px) {
@@ -206,17 +248,18 @@
 			color: #2E2F31 !important;
 			cursor: pointer;
 			display: inline-block;
-			font-size: 0.8em;
+			font-size: 1em;
 			font-weight: 900;
 			height: 3.5em;
 			line-height: 3.45em;
 			overflow: hidden;
-			padding: 0 -10em 0 1.5em;
+			padding: 0 -5em 0 0em;
 			text-align: left;
 			text-overflow: ellipsis;
 			white-space: nowrap;
 		}
-
+	
+/* Button */
 		button,
 		.button {
 			-moz-appearance: none;
@@ -253,57 +296,130 @@
 			box-shadow: inset 0 0 0 2px #4B86B4;
 		}
 
+/* Projects */
+		.projects {
+			cursor: pointer;
+			display: block;
+			width: 100%;
+			text-align: left;
+			box-shadow: inset 0 -2px 0 0 #585858;
+			height: 5em;
+			line-height: 5em;
+			padding: 1em 0 0em 0;
+		}
+
+		.projects p {
+			margin-right: auto;
+		}
+
+		.projects-container {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			margin-top: 0em;
+		}
+
+		.projects h4 {
+			margin-bottom: .5em; /* Adjust the bottom margin to add space */
+		}
+
+		.projects:hover {
+			position: relative;
+		}
+		
+		.project1:hover::after,
+		.project2:hover::after,
+		.project3:hover::after,
+		.project4:hover::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: em;
+			width: 400px; /* Adjust size as needed */
+			height: 500px; /* Adjust size as needed */
+			right: -100px; /* Adjust position as needed */
+			transform: translate(-30%, -20%);
+			opacity: 0.5;
+			background-size: contain;
+			background-repeat: no-repeat;
+			transition: opacity 0.3s ease-in-out;
+		}
+		
+		.project1:hover::after {
+			background-image: url('https://influencermarketinghub.com/wp-content/uploads/2020/04/The-Ultimate-Guide-to-Advertising-on-Spotify.png');
+		}
+		
+		.project2:hover::after {
+			background-image: url('https://static.vecteezy.com/system/resources/previews/026/721/112/non_2x/coffee-beans-hand-drawing-sketch-engraving-illustration-style-png.png');
+		}
+		
+		.project3:hover::after {
+			background-image: url('https://img.freepik.com/premium-vector/classic-car-line-art-illustration_53734-30.jpg');
+		}
+		
+		.project4:hover::after {
+			background-image: url('https://assets.aboutamazon.com/dims4/default/8cfb298/2147483647/strip/true/crop/1600x900+0+0/resize/767x431!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2Fa2%2F9a%2Fad83d2e84459ab962f50fc8d2317%2Fgivebackbox-inline1.jpg');
+		}
+
 /* Accordion */
  /* Style the buttons that are used to open and close the accordion panel */
- .accordion {
-	background-color: #E7EFF6;
-	color: #2E2F31; 
-	cursor: pointer;
-	display: block;
-	width: 50%;
-	text-align: left;
-	font-size: 22px;
-	font-weight: 500;
-	padding: .5em 0 .5em 0;
-	transition: 0.4s;
-  }
+ 	.accordion {
+		background-color: #E7EFF6;
+		color: #2E2F31; 
+		cursor: pointer;
+		display: block;
+		width: 50%;
+		text-align: left;
+		font-size: 23px;
+		font-weight: 500;
+		padding: .5em 0 -5em 0;
+		transition: background-color 0.4s, box-shadow 0.4s, transform 0.4s;
+		border: none;
+		outline: none;
+		position: relative;
+  	}
 
-  .accordion-container {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	margin-top: -15em;
-}
+  	.accordion-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin-top: -15em;
+	}
 
-
-  .accordion:after {
-	content: '\02795'; /* Unicode character for "plus" sign (+) */
-	font-size: 20px;
-	border: 0;
-	color: #2E2F31;
-	float: right;
-  }
+  	.accordion:after {
+		content: '\002B'; /* Unicode for the plus sign */
+		font-size: 30px;
+		color: #2E2F31;
+		float:right;
+  	}
   
-  .active:after {
-	content: "\2796"; /* Unicode character for "minus" sign (-) */
-  }
+  	.active:after {
+		content: "\2212"; /* Unicode for the minus sign */
+		font-size: 30px;
+  	}
   
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
+ 	 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  	.active, .accordion:hover {
 	background-color: #E7EFF6;
-  }
+  	}
   
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
-	background-color: #E7EFF6;
-	display: none;
-	overflow: hidden;
-	transition: max-height 0.5s ease-out, padding 0.5s ease-out;
-  } 
+  	/* Style the accordion panel. Note: hidden by default */
+  	.panel {
+		background-color: #E7EFF6;
+		display: none;
+		overflow: hidden;
+		max-height: 0;
+    	opacity: 0;
+		transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+		padding: 0;
+  	} 
 
-  .panel.open {
-	transition: max-height 1s ease-in-out, padding 1s ease-in-out;
-}
+  	.panel.open {
+		display: block;
+		max-height: 400px; /* or any maximum height you expect */
+    	opacity: 1;
+		transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+	}
 
 /* Icon */
 
