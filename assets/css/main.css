@@ -466,7 +466,7 @@
 
   	@media screen and (max-width: 480px) {
 		.accordion-container {
-			padding-top: 20px;
+			padding-top: 1em;
 		}
 	}
 
