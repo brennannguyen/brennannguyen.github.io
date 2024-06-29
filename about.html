@@ -18,7 +18,7 @@
 							<ul>
 								<li><a href="./" class="title">Brennan Nguyen</a></li>
 								<li><a href="./about" class="menu">About</a></li>
-								<li><a href="./projects" class="menu">Projects</a></li>
+								<li><a href="./projects" target = "_blank"class="menu">Projects</a></li>
 								<li><a href="mailto:brennantkn@gmail.com" class="menu contact">Contact</a></li>
 							</ul>
 							</nav>
@@ -37,8 +37,6 @@
 							<p>I have interests in data visualization, data analysis, business intelligence, and creative design. My background in marketing has taught me how to effectively convey messages to audiences. I believe data is only useful when your audience is able to understand its value and purpose.
 							Therefore, as an analyst I strive to develop visualizations and reports that are digestible and actionable.				
 							</p>
-
-	
 							<div class="accordion-container">
 								<drop class="accordion">Work Experience</drop>
 									<div class="panel">
@@ -69,7 +67,7 @@
 										<br />
 											<b>Tools:</b> Jupyter Notebook, Jira, Confluence, GitHub, BMC Control-M (Workflow Automation Software), Microsoft Office Suite</p>
 									</div>
-								<drop class="accordion">Random Facts About Me</drop>
+								<drop class="accordion random-facts">Random Facts About Me</drop>
 									<div class="panel">
 										<p>
 											In my free time, I practice yoga, read books, play pickleball, and learn new recipes. I am passionate about Excel and use it for an assortment of personal matters from travel itineraries to recipe databases.
@@ -107,6 +105,26 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				// JavaScript to toggle the accordion with smooth transitions
+				document.querySelectorAll('.accordion').forEach((accordion) => {
+					accordion.addEventListener('click', function() {
+						this.classList.toggle('active');
+						
+						var panel = this.nextElementSibling;
+						if (panel.style.maxHeight) {
+							panel.style.maxHeight = null;
+							panel.style.opacity = 0;
+							setTimeout(() => {
+								panel.classList.remove('open');
+							}, 500);
+						} else {
+							panel.classList.add('open');
+							panel.style.maxHeight = panel.scrollHeight + "px";
+							panel.style.opacity = 1;
+						}
+					});
+				});
+			</script>			
 	</body>
 </html>
