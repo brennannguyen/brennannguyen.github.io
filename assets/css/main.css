@@ -147,14 +147,13 @@
 
 		h2, h3, h4 {
 			font-size: 1em;
-			margin: 0.5em 1em 0 0;
+			margin: 0.5em 1em 0;
 		}
 
 		h5 {
 			font-size: 1em;
 			margin-bottom: 4em;
 		}
-
 
 		p {
 			margin: 0 1em 1.5em 1em;
@@ -211,6 +210,10 @@
 			margin-right: 50em;
 			font-size: 16px;
             font-weight: 400;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			max-width: 100;
 		}
 
         #header .menu {
@@ -268,6 +271,13 @@
 				#header nav ul li {
 					margin: 10px 0;
 				}
+		}
+
+		@media screen and (max-width: 480px) {
+			#header .title {
+				font-size: 16px; /* Adjust as needed for better fit */
+				white-space: normal; /* Allow wrapping */
+			}
 		}
 		
 		drop,
