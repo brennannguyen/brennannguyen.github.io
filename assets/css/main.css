@@ -597,6 +597,7 @@
 
 			.image.right {
 				margin-bottom: 20px; /* Adjust space below the image */
+				max-width: 20%;
 			}
 
 		}			
