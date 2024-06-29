@@ -463,7 +463,13 @@
   	.active, .accordion:hover {
 	background-color: #E7EFF6;
   	}
-  
+
+  	@media screen and (max-width: 480px) {
+		.accordion-container {
+			padding-top: 20px;
+		}
+	}
+
   	/* Style the accordion panel. Note: hidden by default */
   	.panel {
 		background-color: #E7EFF6;
