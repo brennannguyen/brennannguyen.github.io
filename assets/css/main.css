@@ -379,7 +379,7 @@
 			display: block;
 			position: absolute;
 			filter: grayscale(100%);
-			top: 15em;
+			top: 1.5em;
 			width: 400px; /* Adjust size as needed */
 			height: 500px; /* Adjust size as needed */
 			right: -100px; /* Adjust position as needed */
@@ -387,7 +387,7 @@
 			opacity: 0.5;
 			background-size: contain;
 			background-repeat: no-repeat;
-			transition: opacity 0.3s ease-in-out;
+			transition: opacity .5s ease-in-out;
 		}
 		
 		.project1:hover::after {
