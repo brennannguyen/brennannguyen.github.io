@@ -368,7 +368,7 @@
 		}
 
 		.projects:hover {
-			position: static;
+			position: relative;
 		}
 		
 		.project1:hover::after,
@@ -382,8 +382,8 @@
 			top: 15em;
 			width: 400px; /* Adjust size as needed */
 			height: 500px; /* Adjust size as needed */
-			right: 30em; /* Adjust position as needed */
-			/* transform: translate(-30%, -20%); */
+			right: -100px; /* Adjust position as needed */
+			transform: translate(-30%, -20%);
 			opacity: 0.5;
 			background-size: contain;
 			background-repeat: no-repeat;
