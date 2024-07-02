@@ -159,10 +159,16 @@
 			margin: .5em 0em 1em .7em;
 		}
 
-		h3, h4 {
-        font-size: 1em;
-        margin: 0.5em 1em 0;
-        padding: 0 1em; /* Add padding to ensure space around the text */
+		h3 {
+			font-size: 1em;
+			font-weight: 600;
+			margin: 1em 1em 1em 1em;
+		}
+		
+		h4 {
+        	font-size: 1em;
+        	margin: 0.5em 1em 0;
+        	padding: 0 1em; /* Add padding to ensure space around the text */
     	}
 
 		h5 {
@@ -174,7 +180,8 @@
 		}
 
 		p {
-			margin: 0 1em 1.5em 1em;
+			margin: 0 0 1.5em 1em;
+			font-size: .9em;
 		}
 
 	}
@@ -254,15 +261,15 @@
 			}
 
 				#header nav {
-						display: none;
+						display: flex;
 				}
 
 				#header title {
-					font-size: 16px; /* Adjust font size as needed */
+					font-size: 20px; /* Adjust font size as needed */
 					white-space: normal; /* Allow text to wrap */
 					overflow: visible; /* Ensure no clipping */
 					text-align: center; /* Center the title */
-					padding: 0 1em; /* Add padding to ensure space around the text */
+					padding: 0 10em; /* Add padding to ensure space around the text */
 					max-width: 100%; /* Ensure it doesn't exceed the screen width */ /* Adjust as needed for better fit */
 				}
 
@@ -491,8 +498,18 @@
 
 	  @media screen and (max-width: 720px) {
 		.accordion-container {
-			padding-top: 20em;
+			padding-top: 1em;
+			margin: 1em 1em 1em 1em;
 			width: 100%;
+		}
+
+		.accordion {
+			width: 90%;
+			font-size: 1.2em;
+		}
+
+		.panel.open {
+			margin: 1em 3em 1em 0em;
 		}
 	}
   
@@ -628,9 +645,12 @@
 			}
 
 			.image.right {
-				max-width: 20%;
-				margin-top: 4em;
-				margin-bottom: 20px; /* Adjust space below the image */
+
+				max-width: 10em;
+				margin-top: .5em;
+				margin-left: 1em;
+				float: right;
+				margin-bottom: .5em; /* Adjust space below the image */
 			}
 
 		}			
