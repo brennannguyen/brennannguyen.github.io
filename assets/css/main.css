@@ -391,9 +391,17 @@
 			width: 100%;
 			text-align: left;
 			box-shadow: inset 0 -2px 0 0 #585858;
-			height: 5em;
-			line-height: 5em;
-			padding: 1em 0 0em 0;
+			height: auto;
+			line-height: normal;
+			padding: 1em 0;
+			position: relative;
+		}
+
+		.projects a {
+			display: block; /* Make the link fill the project container */
+			color: inherit;
+			text-decoration: none;
+			padding: 0; /* Ensure no padding interferes with clickability */
 		}
 
 		.projects p {
@@ -423,7 +431,7 @@
 			display: block;
 			position: fixed;
 			filter: grayscale(100%);
-			top: 45%;
+			top: 10%;
 			right: 20%; /* Adjust position as needed */
 			width: 400px; /* Adjust size as needed */
 			height: 500px; /* Adjust size as needed */
@@ -432,7 +440,7 @@
 			background-size: contain;
 			background-repeat: no-repeat;
 			transition: opacity .7s ease-in-out;
-			z-index: 0;
+			z-index: -1;
 		}
 
 		.projects:hover .project1::after,
@@ -444,20 +452,21 @@
 		
 		
 		.project1:hover::after {
+			background-image: url('https://cdn-icons-png.flaticon.com/512/3126/3126647.png');
+		}
+
+		.project2:hover::after {
 			background-image: url('https://raw.githubusercontent.com/brennannguyen/brennannguyen.github.io/main/images/music.png');
 		}
 		
-		.project2:hover::after {
+		.project3:hover::after {
 			background-image: url('https://raw.githubusercontent.com/brennannguyen/brennannguyen.github.io/main/images/coffee.png');
 		}
 		
-		.project3:hover::after {
+		.project4:hover::after {
 			background-image: url('https://raw.githubusercontent.com/brennannguyen/brennannguyen.github.io/main/images/car.png');
 		}
 		
-		.project4:hover::after {
-			background-image: url('https://raw.githubusercontent.com/brennannguyen/brennannguyen.github.io/main/images/box.png');
-		}
 
 		@media screen and (max-width: 736px) {
 
@@ -465,13 +474,21 @@
 				margin: 1em 0;
 				width: 90%;
 			}
+
+			.projects a {
+				padding: 1em;
+				color: #4B86B4;
+			}
+
+			.projects p {
+				margin: .5em 1em 1em 1.2em;
+			}
+			
 			
 			.projects {
 				padding: 1em;
 				box-shadow: none;
-				height: auto;
-				line-height: normal;
-				border-bottom: 1px solid #585858;
+				border-bottom: 2px solid #585858;
 			}
 			
 			.projects:hover::after,
