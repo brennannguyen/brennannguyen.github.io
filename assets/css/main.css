@@ -756,7 +756,7 @@
 	@media screen and (max-width: 1280px) {
 
 		#footer {
-			padding: 5em 0 0em 0 ;
+			padding: 0em 0 0em 0 ;
 		}
 
 			#footer > .inner section:nth-child(1) {
