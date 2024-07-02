@@ -415,23 +415,31 @@
 			position: relative;
 		}
 		
-		.project1:hover::after,
-		.project2:hover::after,
-		.project3:hover::after,
-		.project4:hover::after {
+		.project1::after,
+		.project2::after,
+		.project3::after,
+		.project4::after {
 			content: '';
 			display: block;
-			position: absolute;
+			position: fixed;
 			filter: grayscale(100%);
-			top: 1.5em;
+			top: 18em;
+			right: 30em; /* Adjust position as needed */
 			width: 400px; /* Adjust size as needed */
 			height: 500px; /* Adjust size as needed */
-			right: -100px; /* Adjust position as needed */
 			transform: translate(-30%, -20%);
-			opacity: 0.5;
+			opacity: 0;
 			background-size: contain;
 			background-repeat: no-repeat;
-			transition: opacity .5s ease-in-out;
+			transition: opacity .7s ease-in-out;
+			z-index: 0; /* Ensure it appears above other content */
+		}
+
+		.projects:hover .project1::after,
+		.projects:hover .project2::after,
+		.projects:hover .project3::after,
+		.projects:hover .project4::after {
+			opacity: .5;
 		}
 		
 		.project1:hover::after {
