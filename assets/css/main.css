@@ -167,8 +167,8 @@
 		
 		h4 {
         	font-size: 1em;
-        	margin: 0.5em 1em 0;
-        	padding: 0 1em; /* Add padding to ensure space around the text */
+        	margin: 0em 0 0 0;
+        	padding: 0 0em; /* Add padding to ensure space around the text */
     	}
 
 		h5 {
@@ -183,6 +183,17 @@
 			margin: 0 0 1.5em 1em;
 			font-size: .9em;
 		}
+
+		.projects-container p {
+			font-size: .8em;
+			margin: 0em 0em 0 0;
+		  }
+
+
+		.accordion-container p {
+			font-size: .9em;
+			margin: 0 1em 1em 0em;
+		  }
 
 	}
 
@@ -261,7 +272,7 @@
 			}
 
 			#header nav {
-				display: flex;
+				display: none;
 				justify-content: column;
 				align-items: center;
 				flex-wrap: center;
@@ -271,6 +282,7 @@
 					font-size: 20px; /* Adjust font size as needed */
 					white-space: normal; /* Allow text to wrap */
 					overflow: visible; /* Ensure no clipping */
+					flex-wrap: nowrap;
 					text-align: center; /* Center the title */
 					padding: 0 1em; /* Add padding to ensure space around the text */
 					max-width: 100%; /* Ensure it doesn't exceed the screen width */ /* Adjust as needed for better fit */
@@ -442,14 +454,25 @@
 
 			.projects-container {
 				margin: 1em 0;
+				width: 90%;
 			}
 			
 			.projects {
 				padding: 1em;
 				box-shadow: none;
+				height: auto;
+				line-height: normal;
 				border-bottom: 1px solid #585858;
 			}
 			
+			.projects:hover::after,
+			.project1:hover::after,
+			.project2:hover::after,
+			.project3:hover::after,
+			.project4:hover::after {
+				display: none;
+			}
+
 			/* Adjusting .accordion section for mobile */
 			.accordion {
 				width: 100%;
