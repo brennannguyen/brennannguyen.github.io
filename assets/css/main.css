@@ -257,36 +257,40 @@
         @media screen and (max-width: 736px) {
 
 			#header {
-				padding: 4em 0 0.1em 0 ;
+				padding: 2em 0 1em 0 ;
 			}
 
-				#header nav {
-						display: flex;
-				}
+			#header nav {
+				display: flex;
+				justify-content: column;
+				align-items: center;
+				flex-wrap: center;
+			}
 
 				#header title {
 					font-size: 20px; /* Adjust font size as needed */
 					white-space: normal; /* Allow text to wrap */
 					overflow: visible; /* Ensure no clipping */
 					text-align: center; /* Center the title */
-					padding: 0 10em; /* Add padding to ensure space around the text */
+					padding: 0 1em; /* Add padding to ensure space around the text */
 					max-width: 100%; /* Ensure it doesn't exceed the screen width */ /* Adjust as needed for better fit */
 				}
 
 				#header nav ul {
+					display: flex;
 					flex-direction: row;
 					flex-wrap: nowrap;
 					justify-content: center;
 					align-items: center;
 					list-style-type: none;
-					gap: 0px;
+					gap: 10px;
 					padding: 0;
-					margin: 0;
-					display: none;
+					top: .5;
+					right: .5;
+					margin: 0em .5em 1em .5em;
 				}
 
 				#header nav ul li {
-					display: none;
 					margin: 0 5px;
 				}
 		}
